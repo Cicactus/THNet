@@ -47,7 +47,7 @@ def main():
                           help='Load input file that contains CDR3 beta sequences and V gene families from PATH/TO/FILE', required=True)
     parser_a.add_argument('-o', '--output_file', dest='output_folder', metavar='PATH/TO/FOLDER',
                           help='Write model output to PATH/TO/FOLDER', required=True)
-    parser_a.add_argument('-n', '--Top_HLA_n', default=3, dest='top_n', metavar='n',
+    parser_a.add_argument('-n', '--Top_HLA_n', type=int, default=3, dest='top_n', metavar='n',
                           choices=[1, 2, 3, 4, 5], help='Output the top n most probable HLA alleles for each HLA type')
 
     # Mismatch_score sub-command
